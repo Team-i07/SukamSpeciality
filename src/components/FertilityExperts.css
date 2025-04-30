@@ -1,21 +1,24 @@
-/* 🔹 Section Styling */
+/* 🔷 Section Styling */
 .experts-section {
   text-align: center;
-  background: #e8f1f9;
+  background: #f4f9fc;
   padding: 60px 20px;
 }
 
 .experts-heading {
-  font-size: 32px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 10px;
+  font-size: 34px;
+  font-weight: 900;
+  color: #1a237e;
+  margin-bottom: 12px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .experts-subtext {
   font-size: 18px;
-  color: #555;
-  margin-bottom: 40px;
+  color: #4f4f4f;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 /* 🔹 Category Tabs */
@@ -24,11 +27,12 @@
   justify-content: center;
   flex-wrap: nowrap;
   overflow-x: auto;
-  background: #ed418600;
-  border-radius: 10px;
-  padding: 10px;
-  gap: 10px;
-  margin-bottom: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -39,112 +43,111 @@
 
 .tab-button {
   white-space: nowrap;
-  padding: 12px 24px;
+  padding: 10px 22px;
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
-  background-color: #0071bc;
-  border: none;
+  color: #1a237e;
+  background-color: #e3eafc;
+  border: 1px solid transparent;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   flex-shrink: 0;
 }
 
-.tab-button:hover {
-  background-color: #0063a7;
-}
-
+.tab-button:hover,
 .tab-button.active {
-  background-color: #007bff;
+  background-color: #1a237e;
+  color: #ffffff;
+  border-color: #1a237e;
 }
 
 /* 🔹 Expert Grid */
 .experts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 70px;
+  max-width: 1200px;
+  margin: 60px auto;
   padding: 0 20px;
-  margin: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 100px;
 }
 
-/* 🏥 Expert Card */
+/* 🩺 Expert Card */
 .expert-card {
-  background-color: #fff;
-  padding: 30px;
-  align-items: center;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.expert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
 
+/* 🧑‍⚕️ Dr. Manoj */
 .expert-card.dr-manoj-karthik {
-  border: 2px solid #0b6330;
-  background-color: #e8f5e9;
+  border: 1px solid #00796b;
+  background-color: #e0f2f1;
 }
 
 .expert-card.dr-manoj-karthik .expert-name {
-  color: #0b6330;
+  font-size: 22px;
+  font-weight: 800;
+  color: #004d40;
+  margin-bottom: 12px;
 }
 
-/* 🌸 Dr. Anitha Style */
-.expert-card.dr-anitha-a-manoj {
-  border: 2px solid #C2185B;
-  background-color: #fff0f5;
-}
-
-.expert-card.dr-anitha-a-manoj .expert-name {
-  color: #C2185B;
-}
-.expert-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.expert-card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-.expert-card.dr-anitha-a-manoj .expert-image img {
-  border: 4px solid #C2185B;
-}
-.expert-card.dr-manoj-karthik .expert-image img {
-  border: 4px solid #0b6330;
-}
-
-/* 🖼 Image Styling */
-.expert-image img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ed4186;
-  padding: 4px;
-  background-color: #fff;
-  margin-bottom: 16px;
-}
-
-/* 🔤 Text Styling */
-.expert-name {
-  font-size: 18px;
+.expert-card.dr-manoj-karthik .expert-qualification,
+.expert-card.dr-manoj-karthik .expert-designation {
+  font-size: 15px;
+  color: #004d40;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.expert-qualification {
-  font-size: 14px;
-  color: #777;
   margin-bottom: 4px;
 }
 
-.expert-designation {
-  font-size: 14px;
-  color: #d06480;
+/* 👩‍⚕️ Dr. Anitha */
+.expert-card.dr-anitha-a-manoj {
+  border: 1px solid #8e24aa;
+  background-color: #fce4ec;
+}
+
+.expert-card.dr-anitha-a-manoj .expert-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #982882;
+  margin-bottom: 12px;
+}
+
+.expert-card.dr-anitha-a-manoj .expert-qualification,
+.expert-card.dr-anitha-a-manoj .expert-designation {
+  font-size: 15px;
+  color: #982882;
   font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* 🖼 Expert Image */
+.expert-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 4px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.expert-card.dr-manoj-karthik img {
+  background-color: #00796b;
+}
+
+.expert-card.dr-anitha-a-manoj img {
+  background-color: #982882;
 }
 
 /* 🔹 Responsive Enhancements */
@@ -154,28 +157,28 @@
   }
 
   .experts-subtext {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .tab-button {
     font-size: 13px;
-    padding: 10px 18px;
+    padding: 10px 16px;
   }
 
   .expert-image img {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
   }
 }
 
 @media (max-width: 480px) {
   .tab-button {
     font-size: 12px;
-    padding: 8px 14px;
+    padding: 8px 12px;
   }
 
   .expert-card {
-    padding: 18px;
+    padding: 20px;
   }
 
   .expert-image img {
@@ -183,12 +186,12 @@
     height: 100px;
   }
 
-  .expert-name {
+  .expert-card .expert-name {
     font-size: 16px;
   }
 
-  .expert-qualification,
-  .expert-designation {
+  .expert-card .expert-qualification,
+  .expert-card .expert-designation {
     font-size: 13px;
   }
 }

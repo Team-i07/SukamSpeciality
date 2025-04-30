@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './ReproductiveMedicine.css';
-import heroBg from '../assets/Website_Images-04.jpg';
+import heroBg from '../assets/RPM.jpg';
 import anitha from '../assets/profile1.png';
 
 const ReproductiveMedicine = () => {

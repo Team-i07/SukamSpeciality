@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './ObstetricsGynaecology.css';
-import heroBg from '../assets/Website_Images-03.jpg';
+import heroBg from '../assets/OBG.jpg';
 import anitha from '../assets/profile1.png';
 
 const ObstetricsGynaecology = () => {

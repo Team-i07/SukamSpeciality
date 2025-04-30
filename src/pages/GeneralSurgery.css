@@ -23,18 +23,22 @@
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
-  color: #fff;
+  color: #00797C;
   max-width: 600px;
 }
 
 .surgery-hero-text h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
+  color:#00797C;
+  font-weight: 800;
 }
 
 .surgery-hero-text p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color:#00797C;
+  font-weight: 600;
 }
 
 

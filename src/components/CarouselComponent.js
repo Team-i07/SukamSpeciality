@@ -3,11 +3,11 @@ import { Carousel } from "react-bootstrap";
 import "./CarouselComponent.css";
 
 // Import images
-import img1 from "../assets/Clinic Web banner-01.jpg";
-import img2 from "../assets/Creatives Web Banner-02.jpg";
-import img3 from "../assets/Normal Pregnancy Web B-01.jpg";
-import img4 from "../assets/Web Banner--02.jpg";
-import img5 from "../assets/Web Banner--01.jpg";
+import img1 from "../assets/web1.jpg";
+import img2 from "../assets/web2.jpg";
+import img3 from "../assets/web3.jpg";
+import img4 from "../assets/web4.jpg";
+import img5 from "../assets/web5.jpg";
 
 const CarouselComponent = () => {
   return (

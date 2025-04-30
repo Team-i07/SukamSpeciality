@@ -1,6 +1,7 @@
+/* SECTION & LAYOUT */
 .showcase-section {
   background: linear-gradient(to right, #f6f9fc, #fdfdfd);
-  padding: 60px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -15,34 +16,21 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
+  gap: 50px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .showcase-card {
-  perspective: 1200px;
+  perspective: 1400px;
   width: 100%;
-  max-width: 360px;
-  height: 400px;
+  max-width: 400px;
+  height: 450px;
   position: relative;
 }
 
-.flip-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
-}
-
-.showcase-card:hover .flip-inner {
-  transform: rotateY(180deg);
-}
-
-/* Shared styles */
-.card-front,
-.card-back {
+/* CARD STYLES */
+.card-front {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -52,16 +40,12 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-
-/* FRONT FACE */
-.card-front {
   background: #ffffff;
   z-index: 2;
 }
 
 .card-img-wrapper {
-  height: 220px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -69,7 +53,7 @@
 .card-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  position:relative;
   transition: transform 0.5s ease;
 }
 
@@ -78,61 +62,47 @@
 }
 
 .card-body {
-  padding: 24px 22px;
   text-align: center;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
 }
 
-.card-body h3 {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #00797C;
+.service-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* UNIQUE TITLE COLORS */
+.service-title.general-surgery {
+  color: #00797C;
+}
+
+.service-title.obstetrics-gynaecology {
+  color: #BC1F6E;
+}
+
+.service-title.reproductive-medicine {
+  color: #982882;
 }
 
 .card-body p {
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   text-align: center;
-  color: #666;
+  color: #424242;
   font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-/* BACK FACE */
-.card-back {
-  background: linear-gradient(135deg, #fafafa, #f0f0f0);
-  transform: rotateY(180deg);
-  padding: 24px 22px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #444;
-}
-
-.card-back h4 {
-  font-size: 1.4rem;
-  color: #2c2c2c;
-  margin-bottom: 12px;
-}
-
-.card-back p {
-  font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.card-back .modern-buttons {
-  margin-top: auto;
-}
-
-/* Modern Buttons */
+/* BUTTON STYLES */
 .modern-buttons {
   display: flex;
   gap: 12px;
@@ -152,24 +122,29 @@
 }
 
 .modern-btn.primary {
-  background-color: #00797C;
-  color: white;
+  background-color: transparent;
+  color: #1a227ed5;
+  border: 2px solid #1a227ed5;
 }
 
 .modern-btn.primary:hover {
   background-color: #3f51b5;
+  color: white;
 }
 
 .modern-btn.secondary {
-  background-color: #e91e63;
-  color: white;
+  background-color: transparent;
+  color: #e91e63;
+  border: 2px solid #e91e63;
 }
 
 .modern-btn.secondary:hover {
   background-color: #c2185b;
+  color: white;
 }
 
-/* RESPONSIVENESS */
+
+/* RESPONSIVE STYLES */
 @media (max-width: 1024px) {
   .showcase-grid {
     justify-content: center;
@@ -181,29 +156,19 @@
     max-width: 90%;
   }
 
-  .card-body {
-    text-align: center;
-    padding: 20px;
-  }
-
   .modern-buttons {
     justify-content: center;
   }
 
-  .card-body h3 {
+  .service-title {
     font-size: 1.4rem;
   }
 
   .card-body p {
     font-size: 14px;
   }
-
-  .card-back h4 {
-    text-align: center;
-  }
 }
 
-/* For touch devices (tap flip) */
 @media (hover: none) {
   .showcase-card:active .flip-inner {
     transform: rotateY(180deg);

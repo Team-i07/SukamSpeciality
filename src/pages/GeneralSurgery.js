@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './GeneralSurgery.css';
-import heroBg from '../assets/pregnency1.jpg';
+import heroBg from '../assets/service1.jpg';
 import manoj from '../assets/profile2.png';
 
 const GeneralSurgeryPage = () => {

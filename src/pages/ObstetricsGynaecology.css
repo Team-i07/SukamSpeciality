@@ -38,11 +38,13 @@
 .surgery-hero-text h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
+  font-weight: 800;
 }
 
 .surgery-hero-text p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 /* Treatment Section */
 .treatment-section {
